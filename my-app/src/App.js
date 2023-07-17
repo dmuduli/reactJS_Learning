@@ -1,8 +1,28 @@
 import "./App.css";
-import ExpenseItem from "./Components/ExpenseItem/ExpenseItem";
+import Expenses from "./Components/ExpenseItem/Expenses";
 import ProductItem from "./Components/Products/ProductItem";
 
 function App() {
+  const expenses = [
+    {
+      id: "e1",
+      title: "Toilet Paper",
+      price: "$94.23",
+      date: new Date(),
+    },
+    {
+      id: "e2",
+      title: "Car Insurance",
+      price: "$1398",
+      date: new Date(),
+    },
+    {
+      id: "e3",
+      title: "Gorcery",
+      price: "$120",
+      date: new Date(),
+    },
+  ];
   const products = [
     {
       id: "p1",
@@ -24,7 +44,9 @@ function App() {
     },
   ];
   return (
-    <div>
+    <div className="app">
+      <Expenses items={expenses} />
+
       <h2>My Demo Shop</h2>
       <ProductItem
         title={products[0].title}
@@ -44,7 +66,7 @@ function App() {
       {/* <ProductItem title="Product 1" price="30" description="First Product" />
       <ProductItem title="Product 2" price="50" description="Second Product" />
       <ProductItem title="Product 3" price="100" description="Third Product" /> */}
-      <ExpenseItem></ExpenseItem>
+      {/* <ExpenseItem></ExpenseItem> */}
     </div>
     // <div>
     //   <h2>Expense Items</h2>

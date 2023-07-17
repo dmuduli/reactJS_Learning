@@ -20,7 +20,7 @@ function ProductItem(props) {
   return (
     <div className="product-item">
       <h2>{props.title}</h2>
-      <div className="product-item__price">${props.price}</div>
+      <div className="product-item__price">{props.price}</div>
       <div className="product-item__description">{props.description}</div>
     </div>
   );
