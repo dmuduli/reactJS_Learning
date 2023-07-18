@@ -1,22 +1,21 @@
 .concepts-header {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .concepts-header img {
   width: 7rem;
+  display: block;
+  margin: 0 auto;
 }
 
-.concepts-header h2 {
-  margin: 0;
+.concepts-header h2.concepts-title {
+  margin: 1rem 0;
   font-size: 1.5rem;
 }
 
 .concepts-header .concepts-description {
   margin: 0;
+  font-size: 1rem;
 }

@@ -1,37 +1,28 @@
 .concepts-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  background: linear-gradient(#250358, #440c66);
+  background: #440c66;
   padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 20px rgba(234, 78, 240, 0.2);
+  border-radius: 8px;
   width: 33%;
-  transition: all 0.2s;
-}
-
-.concepts-item:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s;
-  box-shadow: 0 2px 30px rgba(234, 78, 240, 0.4);
 }
 
 .concepts-item img {
   width: 6rem;
   height: 5rem;
   object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
 
 .concepts-item h2.concepts-title {
-  margin: 0;
-  font-size: 1rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
 }
 
 .concepts-item .concepts-description {
-  margin: 0;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  color: #ffffff;
 }

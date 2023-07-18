@@ -4,9 +4,11 @@ import "./ConceptsItem.css";
 function ConceptsItem(props) {
   return (
     <ConceptsCard className="concepts-item">
-      <img src={props.image} alt={props.title} />
-      <h2 className="concepts-title">{props.title}</h2>
-      <div className="concepts-description">{props.description}</div>
+      <img src={props.reactConceptsImage} alt={props.reactConceptsTitle} />
+      <h2 className="concepts-title">{props.reactConceptsTitle}</h2>
+      <div className="concepts-description">
+        {props.reactConceptsDescription}
+      </div>
     </ConceptsCard>
   );
 }

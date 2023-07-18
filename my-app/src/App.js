@@ -99,7 +99,11 @@ function App() {
       <ProductItem title="Product 3" price="100" description="Third Product" /> */}
       {/* <ExpenseItem></ExpenseItem> */}
       <h2>React Concepts</h2>
-      <ConceptsHeader />
+      <ConceptsHeader
+        reactConceptsImage={reactConcepts[0].image}
+        reactConceptsTitle={reactConcepts[0].title}
+        reactConceptsDescription={reactConcepts[0].description}
+      />
       <Concepts items={reactConcepts} />
     </div>
     // <div>
