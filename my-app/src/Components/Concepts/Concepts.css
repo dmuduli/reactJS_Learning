@@ -1,3 +1,8 @@
+.concept-wrapper {
+  background-color: #170e1f;
+  padding: 1.5rem;
+}
+
 .concept-container {
   display: flex;
   gap: 1.5rem;

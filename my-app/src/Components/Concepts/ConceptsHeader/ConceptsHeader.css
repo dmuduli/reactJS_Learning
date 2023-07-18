@@ -13,9 +13,11 @@
 .concepts-header h2.concepts-title {
   margin: 1rem 0;
   font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .concepts-header .concepts-description {
   margin: 0;
   font-size: 1rem;
+  color: #ffffff;
 }

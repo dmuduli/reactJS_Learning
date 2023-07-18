@@ -2,10 +2,10 @@ import "./App.css";
 import Expenses from "./Components/ExpenseItem/Expenses";
 import ProductItem from "./Components/Products/ProductItem";
 import Concepts from "./Components/Concepts/Concepts";
-import KeyConceptImg from "./assets/images/key-concepts.png";
-import ComponentImg from "./assets/images/components.png";
-import StateImg from "./assets/images/state.png";
-import EventImg from "./assets/images/events.png";
+import KeyConceptImg from "./assets/images/key-img.jpg";
+import ComponentImg from "./assets/images/component-img.jpg";
+import StateImg from "./assets/images/state-img.jpg";
+import EventImg from "./assets/images/event-img.jpg";
 
 function App() {
   const expenses = [

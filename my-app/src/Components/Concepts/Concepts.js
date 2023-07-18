@@ -5,7 +5,7 @@ import "./Concepts.css";
 
 const Concepts = (props) => {
   return (
-    <div>
+    <div className="concept-wrapper">
       <ConceptsHeader
         reactConceptsImage={props.items[0].image}
         reactConceptsTitle={props.items[0].title}
