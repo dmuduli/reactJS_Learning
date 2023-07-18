@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../Card/Card";
 import "./ProductItem.css";
 
 // function Products() {
@@ -18,11 +19,11 @@ import "./ProductItem.css";
 
 function ProductItem(props) {
   return (
-    <div className="product-item">
+    <Card className="product-item">
       <h2>{props.title}</h2>
       <div className="product-item__price">{props.price}</div>
       <div className="product-item__description">{props.description}</div>
-    </div>
+    </Card>
   );
 }
 
