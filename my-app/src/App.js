@@ -2,7 +2,10 @@ import "./App.css";
 import Expenses from "./Components/ExpenseItem/Expenses";
 import ProductItem from "./Components/Products/ProductItem";
 import Concepts from "./Components/Concepts/Concepts";
-import ConceptsHeader from "./Components/Concepts/ConceptsHeader/ConceptsHeader";
+import KeyConceptImg from "./assets/images/key-concepts.png";
+import ComponentImg from "./assets/images/components.png";
+import StateImg from "./assets/images/state.png";
+import EventImg from "./assets/images/events.png";
 
 function App() {
   const expenses = [
@@ -48,28 +51,28 @@ function App() {
   const reactConcepts = [
     {
       id: "rc1",
-      image: "./assets/images/key-concepts.png",
       title: "Key React Concepts",
+      image: KeyConceptImg,
       description: "Selected key React concepts you should know about.",
     },
     {
       id: "rc2",
       title: "Components",
-      image: "./assets/images/components.png",
+      image: ComponentImg,
       description:
         "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. Components can receive data via props, and they can render dynamic output using JSX.",
     },
     {
       id: "rc3",
       title: "State",
-      image: "./assets/images/state.png",
+      image: StateImg,
       description:
         "State is data that may change over time. As it changes, the UI should be updated to reflect the updated data. Each component can maintain its own state and multiple components can share state.",
     },
     {
       id: "rc4",
       title: "Events",
-      image: "./assets/images/events.png",
+      image: EventImg,
       description:
         "Event handlers are added via props to (built-in) components. You pass functions as values to such event handlers to control which functions gets executed for which event.",
     },
@@ -98,12 +101,8 @@ function App() {
       <ProductItem title="Product 2" price="50" description="Second Product" />
       <ProductItem title="Product 3" price="100" description="Third Product" /> */}
       {/* <ExpenseItem></ExpenseItem> */}
+
       <h2>React Concepts</h2>
-      <ConceptsHeader
-        reactConceptsImage={reactConcepts[0].image}
-        reactConceptsTitle={reactConcepts[0].title}
-        reactConceptsDescription={reactConcepts[0].description}
-      />
       <Concepts items={reactConcepts} />
     </div>
     // <div>
