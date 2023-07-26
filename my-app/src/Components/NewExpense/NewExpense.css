@@ -1,0 +1,13 @@
+.new-expense_controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.new-expense_control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.new-expense_control label {
+  font-weight: 600;
+}

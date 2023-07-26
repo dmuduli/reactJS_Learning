@@ -1,6 +1,7 @@
 import "./App.css";
 import Expenses from "./Components/ExpenseItem/Expenses";
 import ProductItem from "./Components/Products/ProductItem";
+import NewExpense from "./Components/NewExpense/NewExpense";
 import Concepts from "./Components/Concepts/Concepts";
 import KeyConceptImg from "./assets/images/key-img.jpg";
 import ComponentImg from "./assets/images/component-img.jpg";
@@ -79,6 +80,8 @@ function App() {
   ];
   return (
     <div className="app">
+      <NewExpense />
+
       <Expenses items={expenses} />
 
       <h2>My Demo Shop</h2>
