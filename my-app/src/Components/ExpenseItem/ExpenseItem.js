@@ -21,7 +21,7 @@ function ExpenseItem(props) {
       <div className="expense-item__price mr-3">{props.expensesPrice}</div>
       <button
         onClick={changeClickHandler}
-        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="bg-transparent hover:bg-blue-500 text-white text-sm font-semibold shadow-sm py-2 px-4 border border-gray-500 hover:border-transparent rounded-md"
       >
         Change Title
       </button>
@@ -29,7 +29,7 @@ function ExpenseItem(props) {
       <p className="text-white mx-2">${applyDiscount}</p>
       <button
         onClick={changeValueHandler}
-        className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >
         Apply Discount
       </button>
