@@ -19,15 +19,15 @@ const NewExpenseForm = () => {
     setCounter((prev) => prev + 1);
   };
 
-  // const [enteredTitle, setEnteredTitle] = useState("");
-  // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [enteredDate, setEnteredDate] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredAmount, setEnteredAmount] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
-  const [userInput, setUserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    enteredDate: "",
-  });
+  // const [userInput, setUserInput] = useState({
+  //   enteredTitle: "",
+  //   enteredAmount: "",
+  //   enteredDate: "",
+  // });
 
   // const titleChangeHandler = (event) => {
   //   console.log(event.target.value);
@@ -51,30 +51,48 @@ const NewExpenseForm = () => {
 
   // console.log(titleChangeHandler, amountChangeHandler, dateChangeHandler);
 
-  const inputChangeHandler = (identifer, value) => {
-    if (identifer === "title") {
-      // setEnteredTitle(value);
-      setUserInput((prevState) => {
-        return { ...prevState, enteredTitle: value };
-      });
-    } else if (identifer === "amount") {
-      // setEnteredAmount(value);
-      setUserInput((prevState) => {
-        return { ...prevState, enteredAmount: value };
-      });
-    } else {
-      // setEnteredDate(value);
-      setUserInput((prevState) => {
-        return { ...prevState, enteredDate: value };
-      });
-    }
-  };
-  console.log(userInput);
+  // const inputChangeHandler = (identifer, value) => {
+  //   if (identifer === "title") {
+  //     // setEnteredTitle(value);
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredTitle: value };
+  //     });
+  //   } else if (identifer === "amount") {
+  //     // setEnteredAmount(value);
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredAmount: value };
+  //     });
+  //   } else {
+  //     // setEnteredDate(value);
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredDate: value };
+  //     });
+  //   }
+  // };
+  // console.log(userInput);
 
   // Form submit function
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value);
+  };
+  const amountChangeHandler = (event) => {
+    setEnteredAmount(event.target.value);
+  };
+  const dateChangeHandler = (event) => {
+    setEnteredDate(event.target.value);
+  };
   const submitFormHandler = (event) => {
     event.preventDefault(); // this function use for not refresh page after click on submit button
     console.log("Submit your form");
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: enteredDate,
+    };
+    console.log(expenseData);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
   };
 
   return (
@@ -115,7 +133,8 @@ const NewExpenseForm = () => {
             <input
               type="text"
               className="rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              onChange={inputChangeHandler}
+              onChange={titleChangeHandler}
+              value={enteredTitle}
             />
             {/* <input
               type="text"
@@ -133,6 +152,8 @@ const NewExpenseForm = () => {
               type="text"
               min="0.01"
               step="0.01"
+              value={enteredAmount}
+              onChange={amountChangeHandler}
               className="rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
           </div>
@@ -144,6 +165,8 @@ const NewExpenseForm = () => {
               type="text"
               min="2023-07-23"
               step="2023-07-26"
+              value={enteredDate}
+              onChange={dateChangeHandler}
               className="rounded-md border-0 py-1.5 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
           </div>
