@@ -7,6 +7,7 @@ import KeyConceptImg from "./assets/images/key-img.jpg";
 import ComponentImg from "./assets/images/component-img.jpg";
 import StateImg from "./assets/images/state-img.jpg";
 import EventImg from "./assets/images/event-img.jpg";
+import Todo from "./Components/Todo/Todo";
 
 function App() {
   const expenses = [
@@ -84,7 +85,9 @@ function App() {
 
       <Expenses items={expenses} />
 
-      <h2>My Demo Shop</h2>
+      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight my-4">
+        My Demo Shop
+      </h2>
       <ProductItem
         title={products[0].title}
         price={products[0].price}
@@ -105,8 +108,11 @@ function App() {
       <ProductItem title="Product 3" price="100" description="Third Product" /> */}
       {/* <ExpenseItem></ExpenseItem> */}
 
-      <h2>React Concepts</h2>
+      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight my-4">
+        React Concepts
+      </h2>
       <Concepts items={reactConcepts} />
+      <Todo />
     </div>
     // <div>
     //   <h2>Expense Items</h2>
