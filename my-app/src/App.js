@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import Expenses from "./Components/ExpenseItem/Expenses";
 import ProductItem from "./Components/Products/ProductItem";
 import NewExpense from "./Components/NewExpense/NewExpense";
@@ -8,27 +9,40 @@ import ComponentImg from "./assets/images/component-img.jpg";
 import StateImg from "./assets/images/state-img.jpg";
 import EventImg from "./assets/images/event-img.jpg";
 import Todo from "./Components/Todo/Todo";
+import Alert from "./Components/Alert/Alert";
 
 function App() {
-  const expenses = [
+  const DUMMY_Expenses = [
     {
       id: "e1",
       title: "Toilet Paper",
-      price: "$94.23",
-      date: new Date(),
+      amount: "94.23",
+      date: new Date("Wed Jul 26 2022 05:30:00 GMT+0530 (India Standard Time)"),
     },
     {
       id: "e2",
       title: "Car Insurance",
-      price: "$1398",
-      date: new Date(),
+      amount: "1398",
+      date: new Date("Wed Jul 26 2021 05:30:00 GMT+0530 (India Standard Time)"),
     },
     {
       id: "e3",
       title: "Gorcery",
-      price: "$120",
-      date: new Date(),
+      amount: "120",
+      date: new Date("Wed Jul 26 2020 05:30:00 GMT+0530 (India Standard Time)"),
     },
+    {
+      id: "e3",
+      title: "Cloths",
+      amount: "1345",
+      date: new Date("Wed Jul 26 2019 05:30:00 GMT+0530 (India Standard Time)"),
+    },
+    // {
+    //   id: "e3",
+    //   title: "Medicine",
+    //   amount: "120",
+    //   date: new Date("Wed Jul 26 2018 05:30:00 GMT+0530 (India Standard Time)"),
+    // },
   ];
   const products = [
     {
@@ -79,11 +93,25 @@ function App() {
         "Event handlers are added via props to (built-in) components. You pass functions as values to such event handlers to control which functions gets executed for which event.",
     },
   ];
+  const [expenses, setExpenses] = useState(DUMMY_Expenses);
+  const addExpenseHandler = (expense) => {
+    // console.log("In App.js");
+    // console.log(expenses);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+    // console.log(expense);
+  };
   return (
     <div className="app">
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
 
       <Expenses items={expenses} />
+
+      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight my-4">
+        Alert Modal
+      </h2>
+      <Alert />
 
       <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight my-4">
         My Demo Shop
