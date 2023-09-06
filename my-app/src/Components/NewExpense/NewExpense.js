@@ -16,7 +16,7 @@ const NewExpense = (props) => {
       id: Math.random().toString() * 1000000000,
     };
     props.onAddExpense(expenseData);
-    console.log(expenseData);
+    // console.log(expenseData);
   };
 
   // Counter increase function
@@ -36,8 +36,24 @@ const NewExpense = (props) => {
     }
   };
 
+  const [highlighted, setHighlighted] = useState(false);
+
+  const toggleStyleHandler = () => {
+    setHighlighted((isHighlighted) => !isHighlighted);
+  };
+
   return (
     <>
+      <div className="mb-3">
+        {/* <p style={{ color: highlighted ? "red" : "black" }}>Style me</p> */}
+        <p className={`${highlighted ? "invalid" : ""}`}>Style me</p>
+        <button
+          className="mt-3 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          onClick={toggleStyleHandler}
+        >
+          Toggle Style
+        </button>
+      </div>
       <div className="flex gap-10 mb-3 bg-red-100 p-3">
         <h4 className="text-lg font-bold border bg-white p-2">{counter}</h4>
         <button
